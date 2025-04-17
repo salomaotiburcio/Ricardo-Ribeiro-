@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,103 +9,108 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    header {
+      background-color: #000000;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header img {
+      max-height: 80px;
+    }
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+    }
+    aside {
+      flex: 1 1 300px;
+      max-width: 350px;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .bio img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      background-color: #ddd;
+      display: block;
+    }
+    section {
+      flex: 2 1 500px;
+    }
+    h1, h2 {
+      color: #000;
+    }
+    .contact-button {
+      background-color: #FFD700;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
       background-color: #000;
       color: #fff;
     }
-    header {
-      background-color: #111;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header img {
-      max-width: 180px;
-    }
-    header h1 {
-      color: #f6b940;
-      font-size: 2rem;
-      margin-top: 1rem;
-    }
-    nav {
-      background-color: #222;
-      text-align: center;
-      padding: 1rem;
-    }
-    nav a {
-      color: #f6b940;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #f6b940;
-    }
-    .btn-agendar {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: #f6b940;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-    footer {
-      background-color: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .social a {
-      margin: 0 0.5rem;
-      color: #f6b940;
-      text-decoration: none;
+    iframe.instagram-media {
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo CONTACTO" />
-    <h1>Ricardo Ribeiro | Psicólogo</h1>
-    <p>"Despertando o sentido, florescendo vidas."</p>
-    <a class="btn-agendar" href="https://wa.me/5535999270650" target="_blank">Agende sua sessão via WhatsApp</a>
+    <img src="logo.png" alt="Logo Ricardo Ribeiro Psicólogo" />
   </header>
 
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-  </nav>
+  <main>
+    <aside class="bio">
+      <img src="foto.jpg" alt="Foto de Ricardo Ribeiro" />
+      <h2>Ricardo Ribeiro</h2>
+      <p><strong>Psicólogo | CRP 04/79520</strong></p>
+      <p>Bacharel em Psicologia pela UNIFEOB. Atua com abordagem humanista, com grande interesse pela Logoterapia — uma linha que busca ajudar o ser humano a encontrar sentido mesmo nas adversidades. Apaixonado pela Psicologia Hospitalar, oferece atendimentos presenciais, on-line e domiciliares.</p>
+      <p><strong>Lema:</strong> "Despertando o Sentido, Florescendo Vidas."</p>
+      <p>
+        <a class="contact-button" href="https://wa.me/5535999270650" target="_blank">Agende pelo WhatsApp</a>
+      </p>
+      <p>
+        <a href="https://instagram.com/ricardoribeiropsicologo" target="_blank">@ricardoribeiropsicologo</a><br />
+        <a href="https://instagram.com/contactoclinicadepsicologia" target="_blank">@contactoclinicadepsicologia</a>
+      </p>
+    </aside>
 
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Sou Ricardo Ribeiro, bacharel em Psicologia pela UNIFEOB (CRP 04/79520). Minha prática é baseada em uma abordagem humanista, com foco em sentido, escuta qualificada e relação terapêutica. Atuo promovendo acolhimento e transformação através do cuidado com o sofrimento psíquico.</p>
-  </section>
+    <section>
+      <h1>Serviços oferecidos</h1>
+      <ul>
+        <li>Psicoterapia individual (adolescentes, adultos e idosos)</li>
+        <li>Atendimento online e presencial</li>
+        <li>Atendimento domiciliar</li>
+        <li><strong>Plantão Psicológico</strong> — escuta terapêutica imediata em momentos de crise</li>
+        <li>Demandas existenciais, emocionais e relacionais</li>
+      </ul>
 
-  <section id="servicos">
-    <h2>Serviços</h2>
-    <ul>
-      <li>Psicoterapia individual (adultos e adolescentes)</li>
-      <li>Atendimento online e presencial</li>
-    </ul>
-  </section>
-
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>WhatsApp para agendamento: <a href="https://wa.me/5535999270650" style="color: #f6b940;">(35) 99927-0650</a></p>
-    <p>Instagram: <a href="https://instagram.com/ricardoribeiropsicologo" style="color: #f6b940;">@ricardoribeiropsicologo</a> | <a href="https://instagram.com/contactoclinicadepsicologia" style="color: #f6b940;">@contactoclinicadepsicologia</a></p>
-  </section>
+      <h2>Instagram da Clínica</h2>
+      <p>Confira as publicações da <strong>CONTACTO Clínica de Psicologia</strong>:</p>
+      <iframe src="https://www.instagram.com/contactoclinicadepsicologia/embed" width="100%" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Ricardo Ribeiro | CRP 04/79520</p>
-    <div class="social">
-      <a href="https://instagram.com/ricardoribeiropsicologo">Instagram</a>
-      <a href="https://instagram.com/contactoclinicadepsicologia">Contato Clínica</a>
-    </div>
+    &copy; 2025 Ricardo Ribeiro - Todos os direitos reservados
   </footer>
 </body>
 </html>
