@@ -60,6 +60,135 @@
             padding: 20px;
             text-align: center;
             margin-top: 40px;
+            <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ricardo Ribeiro, Psicólogo formado pela UNIFEOB (CRP 04/79520), oferece psicoterapia presencial e online com abordagem humanista e foco na busca de sentido.">
+  <title>Ricardo Ribeiro | Psicólogo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .dark-mode .card {
+      background-color: #1f1f1f;
+      border-color: #333;
+    }
+    .navbar {
+      margin-bottom: 20px;
+    }
+    .section {
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">Ricardo Ribeiro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#abordagem">Abordagem</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+        <button class="btn btn-light ms-3" onclick="toggleDarkMode()">Modo Escuro</button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="inicio" class="section text-center">
+    <div class="container">
+      <h1>Bem-vindo à sua jornada de sentido</h1>
+      <p>Psicoterapia com abordagem humanista e logoterapêutica</p>
+      <a href="https://wa.me/5535999270650" class="btn btn-success mt-3">Agende uma sessão</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="section bg-light">
+    <div class="container">
+      <h2>Sobre Mim</h2>
+      <p>Sou Ricardo Ribeiro, psicólogo formado pela UNIFEOB, com CRP 04/79520. Atuo com psicoterapia individual, buscando acolher e ajudar pessoas a encontrarem sentido em suas vidas.</p>
+    </div>
+  </section>
+
+  <section id="abordagem" class="section">
+    <div class="container">
+      <h2>Minha Abordagem</h2>
+      <p>Baseio meu trabalho na Logoterapia de Viktor Frankl, acolhendo o sofrimento e ajudando a criar novos significados a partir das vivências pessoais de cada paciente.</p>
+    </div>
+  </section>
+
+  <section id="servicos" class="section bg-light">
+    <div class="container">
+      <h2>Serviços</h2>
+      <ul>
+        <li>Psicoterapia online</li>
+        <li>Psicoterapia presencial em Poços de Caldas</li>
+        <li>Plantão Psicológico</li>
+        <li>Atendimento domiciliar</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="section">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <p>(Aqui você poderá adicionar relatos de pacientes com autorização)</p>
+    </div>
+  </section>
+
+  <section id="blog" class="section bg-light">
+    <div class="container">
+      <h2>Blog</h2>
+      <p>Em breve, artigos sobre saúde mental, sentido da vida, ansiedade e muito mais!</p>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <div class="container">
+      <h2>Contato</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+        </div>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem</label>
+          <textarea class="form-control" id="mensagem" rows="4" placeholder="Escreva aqui..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 bg-primary text-white">
+    <p>Ricardo Ribeiro | Psicólogo | CRP 04/79520<br>Poços de Caldas - MG</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
         }
     </style>
 </head>
