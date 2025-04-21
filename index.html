@@ -119,7 +119,80 @@
             <li><span class="highlight">Terapia Online e Presencial</span></li>
             <li><span class="highlight">Plantão Psicológico</span></li>
         </ul>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria de Imagens</title>
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .swiper-container {
+      width: 100%;
+      max-width: 700px;
+      height: 500px;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Galeria de Imagens</h2>
+
+  <!-- Carrossel -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="file-NuRe8fQWkYvMfjEn2Awp7X.jpg" alt="Imagem 1" /></div>
+      <div class="swiper-slide"><img src="file-JwTZ1ZgExzVxi9Aji4PKzy.jpg" alt="Imagem 2" /></div>
+      <div class="swiper-slide"><img src="file-C9yM9obaNZAFx7XQoR9ipd.jpg" alt="Imagem 3" /></div>
+      <div class="swiper-slide"><img src="file-UizEhHrJ81yxa1VweSDrS9.jpg" alt="Imagem 4" /></div>
+      <div class="swiper-slide"><img src="file-9at4atpf6tzjE5R9Lx7tKc.jpg" alt="Imagem 5" /></div>
+      <div class="swiper-slide"><img src="file-FYMvW5z8kpNjsm6gFQShte.jpg" alt="Imagem 6" /></div>
+    </div>
+
+    <!-- Botões -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Inicialização -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+
+</body>
+</html>
+        
         <h2>Saúde Mental</h2>
         <p><span class="highlight">Ansiedade:</span> dificuldades em lidar com preocupações constantes, tensão e medo.</p>
         <p><span class="highlight">Depressão:</span> sentimentos persistentes de tristeza, desânimo e perda de interesse nas atividades.</p>
