@@ -120,7 +120,103 @@
             <li><span class="highlight">Plantão Psicológico</span></li>
         </ul>
 
-       
+       <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossos Serviços</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #000;
+    }
+
+    .swiper-pagination-bullet {
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Nossos Serviços e Convênios</h2>
+
+  <!-- Carrossel -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="servico_1.jpg" alt="Serviço 1"></div>
+      <div class="swiper-slide"><img src="servico_2.jpg" alt="Serviço 2"></div>
+      <div class="swiper-slide"><img src="servico_3.jpg" alt="Serviço 3"></div>
+      <div class="swiper-slide"><img src="servico_4.jpg" alt="Serviço 4"></div>
+      <div class="swiper-slide"><img src="servico_5.jpg" alt="Serviço 5"></div>
+      <div class="swiper-slide"><img src="servico_6.jpg" alt="Serviço 6"></div>
+    </div>
+
+    <!-- Navegação -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Paginação -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Configuração -->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+</body>
+    </html>
         <h2>Saúde Mental</h2>
         <p><span class="highlight">Ansiedade:</span> dificuldades em lidar com preocupações constantes, tensão e medo.</p>
         <p><span class="highlight">Depressão:</span> sentimentos persistentes de tristeza, desânimo e perda de interesse nas atividades.</p>
