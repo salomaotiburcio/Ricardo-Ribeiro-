@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Clínica de Psicologia</title>
+    <style>
+        :root {
+            --primary-color: #3c2920;
+            --secondary-color: #e6b52e;
+            --text-color: #e4d5b7;
+            --light-text: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border-radius: 4px solid var(--secondary-color);
+        }
+        
+        header img {
+            max-width: 180px;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+        }
+        
+        .profile {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .profile img {
+            max-width: 220px;
+            border-radius: 12px;
+        }
+        
+        h2 {
+            color: var(--secondary-color);
+            margin: 30px 0 15px;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: #000;
+        }
+        
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background-color: #25d366;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #1da851;
+        }
+        
+        .services-intro {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .services-intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        /* Serviços em grade */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+        
+        .service-card {
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .service-card .service-header {
+            padding: 20px;
+            color: var(--text-color);
+        }
+        
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .service-card .service-content {
+            padding: 0 20px 20px;
+            color: var(--text-color);
+            flex-grow: 1;
+        }
+        
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .convenio-section {
+            background-color: var(--primary-color);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px auto;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 1200px;
+        }
+        
+        .convenio-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+        }
+        
+        .convenio-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        .convenio-logo {
+            max-width: 180px;
+            filter: brightness(1.1);
+        }
+        
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            font-family: "Georgia", serif;
+            color: #333;
+            border-top: 1px solid #ddd;
+            animation: fadeIn 2s ease-in;
+            margin: 40px 0;
+        }
+
+        .quote-section blockquote {
+            margin: 0 auto;
+            max-width: 800px;
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .quote-section footer {
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+            color: #555;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: var(--text-color);
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Contacto Clínica de Psicologia">
+        <h1>Contacto - Clínica de Psicologia</h1>
+        <p>Cuidando da sua saúde mental com profissionalismo e acolhimento.</p>
+    </header>
+
+    <div class="container">
+        <div class="profile">
+            <img src="foto_perfil.jpg" alt="Psicólogo Ricardo Ribeiro">
+            <h2>Ricardo Ribeiro</h2>
+            <p>Psicólogo | CRP 04/79520</p>
+        </div>
+
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>
+              Olá! Sou <strong>Ricardo Ribeiro</strong>, <strong>psicólogo clínico (CRP 04/79520)</strong>, bacharel em Psicologia pelo Centro Universitário UNIFEOB. Tenho como missão acolher, compreender e auxiliar cada pessoa que busca por um espaço de escuta, reflexão e crescimento.
+            </p>
+            <p>
+              Desde os primeiros anos da graduação, me encantei pela <strong>psicologia hospitalar e a Abordagem Humanista</strong>, onde pude vivenciar o cuidado com pessoas em situações de dor, luto, adoecimento e finitude. Essa experiência me transformou profundamente e reforçou minha vocação em oferecer uma escuta ética, acolhedora e com sentido.
+            </p>
+            <p>
+              Minha atuação clínica é baseada na <strong>Logoterapia</strong>, abordagem existencial desenvolvida por Viktor Frankl, que compreende o ser humano como alguém que, acima de tudo, busca <strong>um sentido para sua existência</strong>. Em minha prática, ajudo meus pacientes a reconstruírem esse sentido a partir de seus valores, escolhas, vivências e possibilidades.
+            </p>
+            <p>
+              Também compreendo a <strong>espiritualidade</strong> como um recurso importante no processo terapêutico não no sentido religioso, mas como uma dimensão de profundidade e conexão com algo maior.
+            </p>
+            <p>
+              Realizo <strong>atendimento domiciliar</strong>, <strong>plantão psicológico</strong> e atendimentos no consultório.
+            </p>
+        </section>
+
+        <section id="clinica">
+            <h2>Sobre a Contato Clínica de Psicologia</h2>
+            <p>
+              A <strong>Contato Clínica de Psicologia</strong> nasce do desejo de criar um espaço terapêutico que acolhe, escuta e transforma um lugar onde o ser humano pode se encontrar, ressignificar e florescer.
+            </p>
+            <p>
+              Nosso nome representa a conexão genuína com a própria essência, com os outros e com o mundo. Acreditamos que o contato verdadeiro consigo mesmo é o primeiro passo para o autoconhecimento e para a construção de uma vida com sentido.
+            </p>
+            <p>
+              Valorizamos a <strong>escuta humanizada</strong>, <strong>ética profissional</strong> e o respeito à <strong>singularidade</strong> de cada ser humano. Nossa missão é <em>"tocar vidas e fazê-las entrarem em contato com seu eu mais íntimo, entrando na presença e significado para transformar e florescer suas essências da vida."</em>
+            </p>
+        </section>
+
+        <a class="cta-button" href="https://wa.me/5535999270650" target="_blank">Agendar pelo WhatsApp</a>
+        
+        <section id="cuidados">
+            <h2>Saúde Mental e Emocional</h2>
+            <p>
+              Cuidar da saúde mental é essencial para uma vida equilibrada e com sentido. Questões como <strong>depressão</strong>, <strong>ansiedade</strong>, <strong>crises existenciais</strong> e <strong>baixa autoestima</strong> são enfrentadas com seriedade e acolhimento na clínica.
+            </p>
+            <p>
+              Também trabalhamos com temas como <strong>espiritualidade</strong>, <strong>criação de valores</strong>, <strong>propósito de vida</strong> e <strong>enfrentamento de perdas</strong> sempre com base no respeito e na individualidade de cada história.
+            </p>
+            <p><span class="highlight">Ansiedade:</span> dificuldades em lidar com preocupações constantes, tensão e medo.</p>
+            <p><span class="highlight">Depressão:</span> sentimentos persistentes de tristeza, desânimo e perda de interesse nas atividades.</p>
+            <p><span class="highlight">Angústia:</span> sentimento de desconforto interno, geralmente sem causa clara que pode refletir crises exitenciais, medo ou falta de sentido. Na psicologia, pode ser vista como um sinal de que algo precisa ser transformado ou ressignificado.</p>
+        </section>
+    </div>
+    
+    <section class="services-intro">
+        <div class="container">
+            <h2>Entendendo Transtornos Mentais</h2>
+            <p>
+                Transtornos mentais não são 'frescura'. São reais e afetam milhões de pessoas no mundo. Entender e acolher faz toda a diferença. Vamos falar mais?
+            </p>
+        </div>
+    </section>       
+
+    <div class="services-grid">
+        <!-- Serviço 1: Ansiedade -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Ansiedade</h3>
+            </div>
+            <div class="service-content">
+                <p>É viver esperando uma má notícia, com o coração acelerado e a mente cheia de "e se?". Ansiedade é um alerta constante. </p>
+            </div>
+        </div>
+
+        <!-- Serviço 2: Depressão -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Depressão</h3>
+            </div>
+            <div class="service-content">
+                <p>Na depressão, a vida perde a cor. Um peso invisível te impede de curtir o que antes amava. Tudo vira tons de cinza.</p>
+            </div>
+        </div>
+
+        <!-- Serviço 3: Transtorno do Pânico -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Transtorno do Pânico</h3>
+            </div>
+            <div class="service-content">
+                <p>De repente, o peito aperta e parece que o mundo vai acabar. No transtorno do pânico, o corpo dispara um alarme falso, mas tão real.</p>
+            </div>
+        </div>
+
+        <!-- Serviço 4: Transtorno Obsessivo-Compulsivo (TOC) -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Transtorno Obsessivo-Compulsivo (TOC)</h3>
+            </div>
+            <div class="service-content">
+                <p>Sabe quando uma ideia não sai da cabeça? No TOC, é como um "supervisor interno" te forçando a checar a porta mil vezes ou repetir uma frase pra se sentir seguro.</p>
+            </div>
+        </div>
+
+        <!-- Serviço 5: TDAH -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>TDAH</h3>
+            </div>
+            <div class="service-content">
+                <p>No TDAH, a mente é um rádio trocando de estação sem parar. Focar é um desafio com tantas "vozes" na cabeça.</p>
+            </div>
+        </div>
+
+        <!-- Serviço 6: TPA – Transtorno de Personalidade Antissocial -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>TPA – Transtorno de Personalidade Antissocial</h3>
+            </div>
+            <div class="service-content">
+                <p>No TPA, regras e sentimentos alheios parecem não importar. A pessoa pode agir com frieza, manipular ou até ferir sem culpa. Mas por trás disso, há uma história que também precisa ser compreendida.</p>
+            </div>
+        </div>
+    </div>                
+
+    <div class="container">        
+        <section id="cuidados">
+            <h2>A importância da identificação dos sintomas</h2>
+            <p>
+              Esses quadros podem afetar intensamente a vida de uma pessoa, mas com o acompanhamento terapêutico, é possível entender melhor o que está acontecendo e encontrar caminhos de cuidado. Identificou sintomas semelhantes ou parecidos? Buscar ajuda é um passo importante para melhorar e aprender a lidar com esses transtornos.
+            </p>
+        </section>
+    </div>
+    
+    <section class="services-intro">
+        <div class="container">
+            <h2>Conheça nossos serviços</h2>
+        </div>
+    </section>
+
+    <div class="services-grid">
+        <!-- Serviço 1: Atendimento Online -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Atendimento Online</h3>
+            </div>
+            <div class="service-content">
+                <p>Terapia à distância, com a mesma qualidade e acolhimento do atendimento presencial. Ideal para quem tem uma rotina agitada ou mora longe.</p>
+            </div>
+        </div>
+
+        <!-- Serviço 2: Atendimento Domiciliar -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Atendimento Domiciliar</h3>
+            </div>
+            <div class="service-content">
+                <p>Psicoterapia no Conforto do Lar. O atendimento Domiciliar é a psicoterapia realizada no domicílio, oferecendo conforto, conveniência e atenção personalizada. Ideal para idosos, pessoas com mobilidade reduzida, em recuperação de cirurgias, doenças crônicas ou em cuidados paliativos. Um suporte emocional acolhedor, diretamente em casa.</p>
+            </div>
+        </div>
+
+        <!-- Serviço 3: Atendimento Presencial -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Atendimento Presencial</h3>
+            </div>
+            <div class="service-content">
+                <p>Um Espaço para Você. No atendimento presencial, oferecemos um ambiente acolhedor e seguro para você explorar suas emoções, superar desafios e se conectar consigo mesmo. Um espaço dedicado ao cuidado emocional e ao autoconhecimento.</p>
+            </div>
+        </div>
+
+        <!-- Serviço 4: Plantão Psicológico -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Plantão Psicológico</h3>
+            </div>
+            <div class="service-content">
+                <p>Apoio em Momentos de Crise. O plantão psicológico oferece acolhimento imediato para quem enfrenta situações de sofrimento ou precisa organizar seus pensamentos em momentos difíceis. É um espaço de escuta e apoio, focado na sua necessidade atual.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="convenio-section">
+        <h2>Convênios</h2>
+        <p>A Contacto Clínica de Psicologia tem parceria com planos de saúde para facilitar seu acesso ao cuidado psicológico.</p>
+        <div class="convenio-logos">
+            <img src="logo-hapvida-NotreDame-Intermedica.png" alt="Notre Dame Intermédica.png" class="convenio-logo"> 
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="para-quem">
+            <h2>Pra quem é a terapia?</h2>
+            <p>A terapia é para todos: pessoas em sofrimento emocional, em busca de autoconhecimento, com dificuldades de relacionamento ou enfrentando fases difíceis da vida.</p>
+        </section>
+
+        <section id="importancia">
+            <h2>Importância da Terapia</h2>
+            <p>Promove o bem-estar, fortalece a saúde mental, desenvolve habilidades emocionais e proporciona mais qualidade de vida.</p>
+        </section>
+
+        <a class="cta-button" href="https://wa.me/5535999270650" target="_blank">Agendar pelo WhatsApp</a>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p><strong>Endereço:</strong> Poços de Caldas, Minas Gerais</p>
+            <p><strong>Telefone:</strong> (35) 99927-0650</p>
+            <p><strong>Email:</strong> ricardoribeiropsicologoofc@gmail.com</p>
+            <p><strong>Instagram:</strong> 
+                <a href="https://instagram.com/ricardoribeiropsicologo" target="_blank" style="color: #e6b52e;">@ricardoribeiropsicologo</a> | 
+                <a href="https://instagram.com/contactoclinicadepsicologia" target="_blank" style="color: #e6b52e;">@contactoclinicadepsicologia</a>
+            </p>
+        </section>
+
+        <!-- Seção de encerramento com citação -->
+        <section class="quote-section">
+            <blockquote>
+                <p>
+                "Acredite na sua capacidade de autotranscendência e de transformação para melhor.
+                Ao mesmo tempo, reconheça que, como seres humanos, estamos sujeitos a errar,
+                mas também a aprender com nossos erros. Nem tudo é em vão: podemos buscar redenção,
+                um novo ciclo pautado em uma vida de maior equilíbrio psíquico e físico."
+                </p>
+                <footer>Ricardo Ribeiro, 2020</footer>
+            </blockquote>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 Contacto Clínica de Psicologia | Psicólogo Ricardo Ribeiro
+    </footer>
+</body>
+</html>
