@@ -41,7 +41,7 @@ header {
 /*logo*/
 .logo {
   max-width: 180px;
-  border-radius: 50;
+  border-radius: 50px;
 }
 
 header h1 {
