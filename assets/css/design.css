@@ -266,7 +266,5 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  margin: 2%;
-  padding: 2%;
   border-radius: 10px;
 }
