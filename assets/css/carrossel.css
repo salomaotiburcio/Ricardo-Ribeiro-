@@ -1,7 +1,7 @@
 .carrossel {
-    height: 100%;
-    width: 100%;
-    max-width: 1000px;
+    height: none;
+    width: none;
+    max-width: none;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
