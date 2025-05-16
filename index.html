@@ -5,8 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contacto - Clínica de Psicologia</title>
-        <!-- arquivo css -->
-        <link rel="stylesheet" href="./assets/css/design.css" />
+        <!-- arquivos css -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="./assets/css/design.css"/>
+        <link rel="stylesheet" href="carrossel.css"/>
     </head>
 
     <!-- Seção body que fica todo o conteúdo do seu site -->
@@ -245,9 +247,53 @@
                 </blockquote>
             </section>
         </div>
-    
+
+        <section class="carrossel">
+            <span>PASSE PARA O LADO</span>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="project-img">
+                      <img src="./img/1.png" alt="Foto 01">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-img">
+                      <img src="./img/2.png" alt="Foto 02">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-img">
+                      <img src="./img/3.png" alt="Foto 03">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-img">
+                      <img src="./img/4.png" alt="Foto 04">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-img">
+                      <img src="./img/5.png" alt="Foto 05">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="project-img">
+                      <img src="./img/6.png" alt="Foto 06">
+                    </div>
+                  </div>
+                </div>
+              
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </section>
+  
         <footer>
             &copy; 2025 Contacto Clínica de Psicologia | Psicólogo Ricardo Ribeiro
         </footer>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="script_carrossel.js"></script>
     </body>
 </html>
