@@ -1,1 +1,259 @@
+/* estilize o css do seu site aqui */
 
+
+:root {
+  --primary-color: #3c2920;
+  --secondary-color: #e6b52e;
+  --text-color: #e4d5b7;
+  --light-text: #ffffff;
+}
+        
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+        
+body {
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+        
+header {
+  text-align: center;
+  padding: 40px 0;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 4px solid var(--secondary-color);
+}
+        
+header img {
+  max-width: 180px;
+}
+        
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+        
+header p {
+  font-size: 1.2rem;
+}
+        
+  .profile {
+  text-align: center;
+  margin: 30px 0;
+}
+        
+.profile img {
+  max-width: 220px;
+  border-radius: 12px;
+}
+        
+h2 {
+  color: var(--secondary-color);
+  margin: 30px 0 15px;
+}
+        
+.highlight {
+  font-weight: bold;
+  color: #000;
+}
+        
+.cta-button {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 15px 30px;
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+        
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #1da851;
+}
+        
+.services-intro {
+  text-align: center;
+  padding: 40px 0;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin-bottom: 40px;
+  position: relative;
+}
+        
+.services-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+        
+/* Serviços em grade */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+        
+.service-card {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+        
+.service-card:hover {
+  transform: translateY(-5px);
+}
+        
+.service-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+        
+.service-card .service-header {
+  padding: 20px;
+  color: var(--text-color);
+}
+        
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+        
+.service-card .service-content {
+  padding: 0 20px 20px;
+  color: var(--text-color);
+  flex-grow: 1;
+}
+        
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+        
+.convenio-section {
+  background-color: var(--primary-color);
+  padding: 40px;
+  border-radius: 10px;
+  margin: 40px auto;
+  color: var(--text-color);
+  text-align: center;
+  max-width: 1200px;
+}
+        
+.convenio-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+        
+.convenio-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+        
+.convenio-logo {
+  max-width: 180px;
+  filter: brightness(1.1);
+}
+        
+.quote-section {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Georgia", serif;
+  color: #333;
+  border-top: 1px solid #ddd;
+  animation: fadeIn 2s ease-in;
+  margin: 40px 0;
+}
+
+.quote-section blockquote {
+  margin: 0 auto;
+  max-width: 800px;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.quote-section footer {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: bold;
+  color: #555;
+  background-color: transparent;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+        }
+        
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+        
+.contact-info {
+  margin-bottom: 20px;
+}
+        
+.social-links {
+  margin-top: 20px;
+}
+        
+.social-links a {
+  color: var(--text-color);
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+        
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+            
+  .container {
+    padding: 10px;
+  }
+            
+  header h1 {
+    font-size: 2rem;
+  }
+}
